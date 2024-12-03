@@ -1,5 +1,7 @@
 FROM amazoncorretto:23-alpine-jdk
 
-COPY target/financego-0.0.1-SNAPSHOT.jar app.jar
+COPY target/financego-0.0.1-SNAPSHOT.jar /app.jar
+
+EXPOSE 9000
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
